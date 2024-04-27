@@ -4,7 +4,7 @@ class HomePageBackground extends StatelessWidget {
 
   final screenHeight;
 
-  const HomePageBackground({Key? key, @required this.screenHeight}) : super(key: key);
+  const HomePageBackground({super.key, @required this.screenHeight});
 
   @override
   Widget build(BuildContext context) {

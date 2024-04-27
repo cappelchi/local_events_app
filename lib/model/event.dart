@@ -1,6 +1,13 @@
-class Event {
-  final String imagePath, title, description, location, duration, punchLine1, punchLine2;
-  final List categoryIds, galleryImages;
+class Event{
+  final String imagePath;
+  final String title;
+  final String description;
+  final String location;
+  final String duration;
+  final String punchLine1;
+  final String punchLine2;
+  final List categoryIds;
+  final List galleryImages;
 
   Event(
       {required this.imagePath,
@@ -22,8 +29,9 @@ final fiveKmRunEvent = Event(
     duration: "3h",
     punchLine1: "Marathon!",
     punchLine2: "The latest fad in foodology, get the inside scoup.",
-    galleryImages: [],
-    categoryIds: [0, 1]);
+    categoryIds: [0, 1],
+    galleryImages: []
+);
 
 final cookingEvent = Event(
     imagePath: "assets/event_images/granite_cooking_class.jpeg",
@@ -44,8 +52,10 @@ final musicConcert = Event(
     duration: "5h",
     punchLine1: "Music Lovers!",
     punchLine2: "The latest fad in foodology, get the inside scoup.",
+    categoryIds: [0, 1],
     galleryImages: ["assets/event_images/cooking_1.jpeg", "assets/event_images/cooking_2.jpeg", "assets/event_images/cooking_3.jpeg"],
-    categoryIds: [0, 1]);
+
+);
 
 final golfCompetition = Event(
     imagePath: "assets/event_images/golf_competition.jpeg",
@@ -55,8 +65,9 @@ final golfCompetition = Event(
     duration: "1d",
     punchLine1: "Golf!",
     punchLine2: "The latest fad in foodology, get the inside scoup.",
+    categoryIds: [0, 3],
     galleryImages: ["assets/event_images/cooking_1.jpeg", "assets/event_images/cooking_2.jpeg", "assets/event_images/cooking_3.jpeg"],
-    categoryIds: [0, 3]);
+);
 
 final events = [
   fiveKmRunEvent,

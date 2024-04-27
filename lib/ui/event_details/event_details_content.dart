@@ -6,6 +6,8 @@ import '../../model/guest.dart';
 import '../../styleguide.dart';
 
 class EventDetailsContent extends StatelessWidget {
+  const EventDetailsContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     final event = Provider.of<Event>(context);
@@ -15,7 +17,7 @@ class EventDetailsContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           Padding(
@@ -25,7 +27,7 @@ class EventDetailsContent extends StatelessWidget {
               style: eventWhiteTitleTextStyle,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -40,12 +42,12 @@ class EventDetailsContent extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.location_on,
                     color: Colors.white,
                     size: 15,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Text(
@@ -56,11 +58,11 @@ class EventDetailsContent extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Text(
               "GUESTS",
               style: guestTextStyle,
@@ -100,8 +102,8 @@ class EventDetailsContent extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Text(event.description, style: eventLocationTextStyle,),
           ),
-          if (event.galleryImages.isNotEmpty) Padding(
-            padding: const EdgeInsets.only(left: 16.0, top: 16, bottom: 16),
+          if (event.galleryImages.isNotEmpty) const Padding(
+            padding: EdgeInsets.only(left: 16.0, top: 16, bottom: 16),
             child: Text(
               "GALLERY",
               style: guestTextStyle,
@@ -115,7 +117,7 @@ class EventDetailsContent extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(left: 16, right: 16, bottom: 32),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
                       child: Image.asset(
                         galleryImagePath,
                         width: 180,

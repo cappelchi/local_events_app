@@ -12,6 +12,8 @@ import '../../app_state.dart';
 
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +29,8 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 32.0),
                       child: Row(
                         children: <Widget>[
                           Text(
@@ -44,8 +46,8 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 32.0),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 32.0),
                       child: Text(
                         "What's Up",
                         style: whiteHeadingTextStyle,

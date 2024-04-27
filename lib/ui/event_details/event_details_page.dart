@@ -10,14 +10,14 @@ class EventDetailsPage extends StatelessWidget {
 
   final Event event;
 
-  const EventDetailsPage({Key? key, required this.event}) : super(key: key);
+  const EventDetailsPage({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Provider<Event>.value(
         value:event,
-        child:Stack(
+        child:const Stack(
           fit: StackFit.expand,
           children: <Widget>[
             EventDetailsBackground(),
